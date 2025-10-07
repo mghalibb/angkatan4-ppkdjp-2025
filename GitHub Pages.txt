@@ -1,0 +1,23 @@
+git clone https://github.com/mghalibb/angkatan4-ppkdjp-2025.git
+
+cd angkatan4-ppkdjp-2025
+
+git add .
+git commit -m "Update file latihan web programming"
+git push
+
+
+git init
+git add .
+git commit -m "First commit"
+git branch -M main
+git remote add origin <url>
+git push -u origin main
+
+
+git init
+git add .
+git commit -m "First commit - upload project web programming"
+git branch -M main
+git remote add origin https://github.com/mghalibb/angkatan4-ppkdjp-2025.git
+git push -u origin main

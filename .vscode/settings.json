@@ -1,0 +1,41 @@
+{
+  // ====== FORMAT & EDITOR ======
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+
+  // ====== FILE TYPE FORMATTERS ======
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ====== EMMET ======
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "php": "html",
+    "blade": "html"
+  },
+
+  // ====== PRETTIER ======
+  "prettier.printWidth": 100,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+
+  // ====== UI & TEMA ======
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Noctis",
+  "editor.fontSize": 14,
+  "window.zoomLevel": -1, // bisa diganti 0, 1.5, 2 sesuai selera
+
+  // ====== OPSIONAL (NYAMAN) ======
+  "editor.minimap.enabled": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "terminal.integrated.fontSize": 13
+}
