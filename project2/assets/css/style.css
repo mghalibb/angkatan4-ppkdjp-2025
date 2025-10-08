@@ -1,0 +1,86 @@
+:root {
+  --dark-grey: #282828;
+  --medium-grey: #616057;
+  --light-grey: #737373;
+  /* Warna hijau dari desain tidak ada hex code-nya, saya pilihkan yang cerah dan modern */
+  --brand-green: #1db954;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa; /* Warna latar belakang umum */
+}
+
+.me-170 {
+  margin-right: 170px !important;
+}
+
+/* =================================
+   Navbar Section Start
+   ================================= */
+
+.navbar-nav .nav-link {
+  color: #565656;
+  border-bottom: 3px solid transparent;
+  font-weight: 500;
+  padding: 6px 15px;
+  margin: 0 5px;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #000000;
+  border-bottom: 4px solid #000000;
+  font-weight: 700;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 12px 17px;
+  margin: 0 7px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link.active {
+  color: #000000;
+  border-bottom: 3px solid #000000 !important;
+  font-weight: 900;
+}
+/* 
+Navbar Section End
+*/
+
+.hero-sectionn {
+  background-size: cover;
+  background-position: center;
+  padding: 13rem 0;
+  border-radius: 15px;
+  margin: 3rem 0;
+  background-image: url('../img/background/1.png');
+}
+
+.hero-sectionn .hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+.hero-sectionn .search-box {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 25px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-sectionn .search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  margin-left: 10px;
+}
+/* =================================
+   Navbar Section End
+   ================================= */
