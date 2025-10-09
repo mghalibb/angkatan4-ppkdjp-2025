@@ -2,13 +2,12 @@
   --dark-grey: #282828;
   --medium-grey: #616057;
   --light-grey: #737373;
-  /* Warna hijau dari desain tidak ada hex code-nya, saya pilihkan yang cerah dan modern */
   --brand-green: #1db954;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f8f9fa; /* Warna latar belakang umum */
+  background-color: #f8f9fa;
 }
 
 .me-170 {
@@ -18,11 +17,10 @@ body {
 /* =================================
    Navbar Section Start
    ================================= */
-
 .navbar-nav .nav-link {
-  color: #565656;
+  color: #000000;
   border-bottom: 3px solid transparent;
-  font-weight: 500;
+  font-weight: 600;
   padding: 6px 15px;
   margin: 0 5px;
   transition: all 0.3s ease-in-out;
@@ -44,43 +42,526 @@ body {
 
 .navbar-nav .nav-link.active {
   color: #000000;
-  border-bottom: 3px solid #000000 !important;
+  border-bottom: 4px solid #000000 !important;
   font-weight: 900;
-}
-/* 
-Navbar Section End
-*/
-
-.hero-sectionn {
-  background-size: cover;
-  background-position: center;
-  padding: 13rem 0;
-  border-radius: 15px;
-  margin: 3rem 0;
-  background-image: url('../img/background/1.png');
-}
-
-.hero-sectionn .hero-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 32px;
-}
-
-.hero-sectionn .search-box {
-  background-color: #ffffff;
-  border: 1px solid #000000;
-  border-radius: 25px;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-}
-
-.hero-sectionn .search-box input {
-  border: none;
-  outline: none;
-  width: 100%;
-  margin-left: 10px;
+  /* width: 100%; */
 }
 /* =================================
    Navbar Section End
+   ================================= */
+
+/* =================================
+   Hero Section Start
+   ================================= */
+.hero-section {
+  position: relative;
+  padding: 8rem 3.5rem;
+  margin: 4rem 0;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  background: url('../img/background/1.png');
+  background-size: cover;
+  background-position: center;
+  justify-content: start;
+  align-items: center;
+  text-align: left;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  color: rgb(0, 0, 0);
+  /* max-width: 600px; */
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-title span {
+  font-size: 4rem;
+}
+
+.hero-buttons {
+  max-width: 400px;
+}
+
+.btn-hero-custom {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--dark-grey);
+  border: 1px solid #c0c0c0;
+  border-radius: 50px; /* Membuat tombol menjadi "pill" */
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: left;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.btn-hero-custom:hover {
+  background-color: white;
+  color: black;
+}
+/* =================================
+   Hero Section End
+   ================================= */
+
+/* =================================
+   Services Section Start
+   ================================= */
+.navbar-transparent {
+  background-color: transparent !important;
+  /* transition: background-color 0.3s ease-in-out; */
+  transition: all 0.3s ease-in-out;
+  top: 3rem;
+}
+
+.navbar-transparent.scrolled {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  top: 0;
+}
+
+.navbar-transparent.scrolled .nav-link,
+.navbar-transparent.scrolled .navbar-brand {
+  color: var(--dark-grey) !important;
+}
+
+.navbar-transparent.scrolled .nav-link.active {
+  color: rgb(0, 0, 0) !important;
+  position: relative;
+}
+
+.navbar-transparent.scrolled .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  /* background-color: var(--dark-grey); */
+}
+
+.services-hero {
+  position: relative;
+  padding-top: 12rem;
+  padding-bottom: 8rem;
+  margin-top: -96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  background: url('../img/background/7.png') no-repeat center center;
+  background-size: cover;
+}
+
+.services-hero .services-hero-title {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #282828;
+}
+.services-hero .services-hero-subtitle {
+  font-size: 1.3rem;
+  color: #282828;
+  max-width: 900px;
+  margin: 0 auto;
+  font-weight: 500;
+  margin-top: -12px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Pricing Section */
+.pricing-section .card-pricing {
+  position: absolute;
+  border: 3px solid #737373;
+  border-radius: 3rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 8px 0 0 0;
+  z-index: 1000;
+}
+
+.pricing-section .card-pricing:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  /* height: 80vh; */
+  height: 45rem;
+}
+
+.card-body h5 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.card-body P {
+  font-weight: 600;
+}
+
+.card-price {
+  font-weight: 900;
+  font-size: 2.4rem;
+  /* height: 4rem; */
+}
+
+.card-price span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6c757d;
+  margin-left: 0.25rem;
+  vertical-align: middle;
+}
+
+.badge-bonus {
+  background-color: #ebebec;
+  color: var(--brand-green);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  align-self: flex-start;
+  margin: 0 0 -1rem 0;
+}
+
+.btn-outline-dark {
+  border-radius: 12px;
+  border: 3px solid #737373;
+  margin: 2rem 0 0 0;
+  font-weight: 900;
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--brand-green);
+  color: rgb(255, 255, 255);
+  border: 3px solid #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  padding: 0.7rem 0.2rem;
+  font-weight: 900;
+}
+
+.card-body hr {
+  border-top: 4px solid var(--dark-grey);
+  opacity: 1;
+  margin: 1rem 0;
+}
+
+.card-body-list {
+  padding: 0 0.7rem;
+}
+.card-body-list .card-body-title {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+li {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-left: -0.3rem;
+}
+
+/* Pricing Section Card Premium */
+.pricing-section .card-premium {
+  /* height: 80vh; */
+  height: 46rem;
+  border: 4px solid #000000;
+}
+
+.card-premium .text-muted {
+  color: #adb5bd !important;
+}
+
+.card-premium .badge-popular {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--dark-grey);
+  border: 1px solid #555;
+  color: white;
+  /* padding: 3rem 1.2rem; */
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  justify-content: center;
+  display: inline-flex;
+  width: 100%;
+  /* margin-bottom: -40px; */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  z-index: -10;
+}
+
+.btn-primary-custom {
+  background-color: var(--dark-grey);
+  color: #ffffff;
+  border-radius: 12px;
+  border: 3px solid #737373;
+  margin: 2rem 0 0 0;
+  font-weight: 900;
+}
+.btn-primary-custom:hover {
+  background-color: var(--brand-green);
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  padding: 0.7rem 0.2rem;
+  font-weight: 900;
+}
+/* Pricing Section Card Premium */
+
+@media (min-width: 900px) and (max-width: 1280px) {
+  .card {
+    height: 58rem;
+  }
+
+  .pricing-section .card-premium {
+    height: 59rem;
+  }
+}
+/* Pricing Section */
+
+/* Virtual Office Section */
+.vo-section {
+  padding: 50px 140px;
+  /* margin: 0 10rem; */
+  /* background-color: #f8f9fa; */
+}
+
+.vo-section-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-weight: 900;
+  font-size: 2.7rem;
+}
+
+.vo-card {
+  background: var(--dark-grey);
+  border-radius: 30px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 560px;
+}
+
+.vo-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.vo-card img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+}
+
+.vo-card-body {
+  padding: 2.4rem 2rem 0 2rem;
+  text-align: center;
+  /* left: 50%; */
+  /* transform: translatey(20%); */
+}
+
+.vo-card h4 {
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.vo-card p {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  font-weight: 300;
+  height: 40px;
+}
+
+.btn-vo {
+  color: var(--brand-green);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1rem;
+  transition: color 0.3s;
+  border-radius: 12px;
+  border: 3px solid var(--brand-green);
+  padding: 0.5rem 0.8rem;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* text-align: center; */
+}
+
+.btn-vo:hover {
+  background-color: var(--brand-green);
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  padding: 0.7rem 1.5rem;
+  font-weight: 900;
+}
+
+/* @media (min-width: 900px) and (max-width: 1280px) {
+  .vo-section {
+    padding: 0 0;
+    margin: 0 0;
+  }
+} */
+
+/* @media (min-width: 320px) and (max-width: 1280px) {
+  .vo-section {
+    padding: 0 0;
+    margin: 0 1rem;
+  }
+} */
+/* Virtual Office Section */
+
+/* Meeting Office Section */
+.packages-section {
+  padding: 8px 140px;
+}
+
+.packages-section-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-weight: 900;
+  font-size: 2.7rem;
+}
+
+.package-card {
+  background: var(--dark-grey);
+  border-radius: 30px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 560px;
+}
+
+.package-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.package-card img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+}
+
+.package-card-body {
+  padding: 2.4rem 2rem 0 2rem;
+  text-align: center;
+  /* left: 50%; */
+  /* transform: translatey(20%); */
+}
+
+.package-card h4 {
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.package-card p {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+/* Meeting Office Section */
+
+/* CTA Section */
+.cta-section {
+  background-image: url('../img/background/25.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 100px 0;
+  margin: 4rem 0 0 0;
+  /* width: 200px; */
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #282828;
+  margin-bottom: 0.5rem;
+}
+
+.cta-subtitle {
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #616057;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  color: #737373;
+  margin-bottom: 2rem;
+}
+
+.btn-cta {
+  background: white;
+  border: 2px solid #737373;
+  color: #282828;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.btn-cta:hover {
+  background: #737373;
+  color: white;
+}
+/* CTA Section */
+.cta-section-container {
+  background-color: #f8f9fa;
+}
+
+.cta-background-card {
+  padding: 3rem;
+  /* border-radius: 1.5rem; */
+  color: white;
+  background-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  margin: 4rem 0 0 0;
+}
+
+.cta-content .small {
+  color: #d0d0d0; /* Warna abu-abu terang untuk sub-judul */
+}
+/* =================================
+   Services Section End
    ================================= */
