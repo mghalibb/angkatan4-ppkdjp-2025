@@ -1,0 +1,34 @@
+Laravel Start The Template
+
+composer install
+
+npm install
+
+npm install && npm run build
+
+cp .env.example .env
+
+php artisan key:generate
+
+php artisan migrate
+
+php artisan serve
+
+npm run dev
+
+
+Command				Description
+npm install or npm i --force	=>This would install all required dependencies in node_modules folder.
+npm install && npm run build	=>This would install all required dependencies in node_modules folder.
+npm run dev			=>Runs the project locally, starts the development server.
+npm run build			=>It bundles with production mode. Your app is now ready to be deployed.
+
+To spin up the Laravel development server, follow the below mentioned steps in a separate terminal:
+
+Command				Description
+composer install		=>This will install all required dependencies in vendor folder.
+cp .env.example .env		=>This will copy .env.example as .env file.
+php artisan key:generate	=>This will generate a unique key and write it in your .env file
+php artisan migrate		=>This will execute all pending migrations to database.
+php artisan db:seed		=>Creates a dummy user into your database for authentication
+php artisan serve		=>Runs the project locally, starts the development server on http://127.0.0.1:8000.

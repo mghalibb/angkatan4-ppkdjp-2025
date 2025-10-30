@@ -1,0 +1,18 @@
+Query Join
+
+-- a. Menampilkan semua pengguna dan pesanan mereka (INNER JOIN)
+SELECT users.id, users.name, orders.product_name
+FROM users
+INNER JOIN orders ON users.id = orders.user_id;
+
+-- b. Menampilkan pengguna yang tidak memiliki pesanan (LEFT JOIN)
+SELECT users.id, users.name, orders.product_name
+FROM users
+LEFT JOIN orders ON users.id = orders.user_id
+WHERE orders.user_id IS NULL;
+
+-- c. Menampilkan pesanan yang tidak memiliki pengguna terdaftar (RIGHT JOIN)
+SELECT users.id AS user_id, users.name, orders.product_name
+FROM users
+RIGHT JOIN orders ON users.id = orders.user_id
+WHERE users.id IS NULL;

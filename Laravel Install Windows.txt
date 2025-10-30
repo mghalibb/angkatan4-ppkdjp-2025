@@ -1,0 +1,49 @@
+Laravel Application
+
+Installing PHP and the Laravel Installer = 
+
+macOS			: /bin/bash -c "$(curl -fsSL https://php.new/install/mac/8.4)"
+Windows PowerShell	: Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows/8.4'))
+Linux			: /bin/bash -c "$(curl -fsSL https://php.new/install/linux/8.4)"
+
+php artisan -V		:
+composer update		:
+composer self-update	:
+
+==Laravel Installer==
+01 = composer global require laravel/installer
+02 = laravel new example-app
+03 = cd example-app
+04 = npm install && npm run build
+05 = php artisan key:generate
+06 = php artisan migrate
+07 = composer run dev
+08 = php artisan serve
+
+==Laravel Composer==
+01 = composer create-project laravel/laravel example-app
+02 = cd example-app
+03 = composer require laravel/breeze --dev
+04 = php artisan breeze:install react
+05 = npm install
+06 = npm run build
+07 = php artisan migrate
+08 = php artisan serve
+09 = composer run dev
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=
+
+01 = php artisan serv --port=8001
+02 = php artisan serve --port=8001
+03 = php artisan serve --port=<nomor_port>
+
+composer create-project laravel/laravel ghalib-project
+
+composer create-project laravel/laravel:9.1.5 webfull-project
+
+php artisan serve

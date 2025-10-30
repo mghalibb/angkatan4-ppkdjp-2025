@@ -1,0 +1,193 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* --- Variabel Warna untuk Kemudahan Kustomisasi --- */
+:root {
+  --primary-color: #4f46e5; /* Ungu Indigo */
+  --primary-hover: #4338ca;
+  --secondary-color: #6b7280; /* Abu-abu netral */
+  --background-color: #f9fafb; /* Latar belakang sangat terang */
+  --card-background: #ffffff;
+  --border-color: #e5e7eb;
+  --text-color: #1f2937;
+  --success-color: #10b981; /* Hijau */
+  --warning-color: #f59e0b; /* Kuning */
+  --danger-color: #ef4444; /* Merah */
+}
+
+/* --- General Styles --- */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  background-color: var(--card-background);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+}
+
+h1 {
+  color: var(--text-color);
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header-actions p {
+  margin: 0;
+  color: var(--secondary-color);
+}
+
+/* --- Tombol dan Aksi --- */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(79, 70, 229, 0.45);
+}
+
+.action-pills {
+  display: flex;
+  gap: 8px;
+}
+
+.action-pills a {
+  padding: 6px 12px;
+  border-radius: 20px; /* Membuat bentuk pil */
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.action-edit {
+  background-color: #fef3c7;
+  color: #92400e;
+  text-decoration: none;
+}
+.action-edit:hover {
+  background-color: #fde68a;
+}
+
+.action-delete {
+  background-color: #fee2e2;
+  color: #991b1b;
+  text-decoration: none;
+}
+.action-delete:hover {
+  background-color: #fecaca;
+}
+
+/* --- Table Styles --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+  vertical-align: middle;
+}
+
+table th {
+  background-color: var(--background-color);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+
+table tbody tr {
+  transition: background-color 0.2s ease;
+}
+table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+table img {
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+}
+
+/* --- Form Styles --- */
+.form-grid {
+  display: grid;
+  grid-template-columns: 150px 1fr; /* Label | Input */
+  gap: 20px 30px;
+  align-items: center;
+}
+
+.form-grid label {
+  font-weight: 500;
+  text-align: right;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+input[type='file'],
+select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.form-actions {
+  grid-column: 2 / -1; /* Rentangkan kolom dari grid ke-2 sampai akhir */
+}
+
+.current-photo {
+  grid-column: 2 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.current-photo img {
+  border: 1px solid var(--border-color);
+}

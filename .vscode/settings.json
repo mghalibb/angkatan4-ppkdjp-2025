@@ -32,7 +32,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Noctis",
   "editor.fontSize": 14,
-  "window.zoomLevel": -1, // bisa diganti 0, 1.5, 2 sesuai selera
+  "window.zoomLevel": -0.6, // bisa diganti 0, 1.5, 2 sesuai selera
 
   // ====== OPSIONAL (NYAMAN) ======
   "editor.minimap.enabled": false,
